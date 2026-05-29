@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internet Secrets</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      background:linear-gradient(to bottom,#000000,#0b1026);
+      padding:20px;
+    }
+
+    header h1{
+      font-size:70px;
+      color:#00ffcc;
+      text-shadow:0 0 20px #00ffcc;
+    }
+
+    header p{
+      margin-top:20px;
+      width:70%;
+      line-height:1.7;
+      color:#d6d6d6;
+      font-size:18px;
+    }
+
+    .btn{
+      margin-top:30px;
+      padding:14px 30px;
+      background:#00ffcc;
+      color:black;
+      border:none;
+      border-radius:30px;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      transform:scale(1.1);
+      box-shadow:0 0 20px #00ffcc;
+    }
+
+    .secret-section{
+      display:none;
+      padding:80px 10%;
+      animation:fade 1s ease;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .secret-section h2{
+      text-align:center;
+      color:#00ffcc;
+      margin-bottom:50px;
+      font-size:40px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#11162c;
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      border:1px solid #1f294d;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(0,255,204,0.5);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#00ffcc;
+    }
+
+    .card p{
+      line-height:1.7;
+      color:#d9d9d9;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:black;
+      color:#888;
+      margin-top:50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <h1>INTERNET SECRETS</h1>
+
+    <p>
+      Explore hidden facts about the internet,
+      cyber mysteries, hacker culture,
+      secret technologies and digital secrets.
+    </p>
+
+    <button class="btn" onclick="showSecrets()">
+      Explore Secrets
+    </button>
+
+  </header>
+
+  <section class="secret-section" id="secretContent">
+
+    <h2>Hidden Internet World</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Dark Web</h3>
+
+        <p>
+          The dark web is a hidden network that requires
+          special browsers like Tor to access.
+          It is used for anonymous communication.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>QR Technology</h3>
+
+        <p>
+          QR codes were first created in Japan.
+          They can store huge amounts of information
+          instantly in square patterns.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Google Easter Eggs</h3>
+
+        <p>
+          Google hides fun tricks inside search.
+          Try searching “Do a barrel roll”
+          for a cool surprise.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cyber Security</h3>
+
+        <p>
+          Every second, hackers attempt thousands
+          of cyber attacks around the world.
+          Strong passwords help stay safe.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Artificial Intelligence</h3>
+
+        <p>
+          AI systems can now generate images,
+          voices and even realistic videos
+          within seconds.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Hidden Cameras</h3>
+
+        <p>
+          Modern spy cameras can be hidden inside
+          clocks, pens and even charging adapters.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Internet Secrets | Designed with HTML, CSS & JavaScript
+  </footer>
+
+  <script>
+
+    function showSecrets(){
+
+      document.getElementById("secretContent").style.display = "block";
+
+      window.scrollTo({
+        top: document.getElementById("secretContent").offsetTop,
+        behavior: "smooth"
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
